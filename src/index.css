@@ -1,0 +1,399 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom font variables */
+:root {
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: Georgia, Cambria, "Times New Roman", Times, serif;
+  --primary-rgb: 59, 130, 246;
+  --accent-rgb: 79, 70, 229;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  font-family: var(--font-sans);
+}
+
+/* Typography improvements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Text selection styling */
+::selection {
+  background-color: hsl(var(--p) / 0.2);
+  color: hsl(var(--pc));
+}
+
+/* DaisyUI Theme Override */
+[data-theme="light"] {
+  --primary: #3b82f6;
+  --primary-focus: #2563eb;
+  --primary-content: #ffffff;
+
+  --secondary: #f3f4f6;
+  --secondary-focus: #e5e7eb;
+  --secondary-content: #1f2937;
+
+  --accent: #4f46e5;
+  --accent-focus: #4338ca;
+  --accent-content: #ffffff;
+
+  --base-100: #ffffff;
+  --base-200: #f9fafb;
+  --base-300: #f3f4f6;
+  --base-content: #1f2937;
+}
+
+[data-theme="dark"] {
+  --primary: #3b82f6;
+  --primary-focus: #2563eb;
+  --primary-content: #ffffff;
+
+  --secondary: #1f2937;
+  --secondary-focus: #111827;
+  --secondary-content: #f9fafb;
+
+  --accent: #4f46e5;
+  --accent-focus: #4338ca;
+  --accent-content: #ffffff;
+
+  --base-100: #0f172a;
+  --base-200: #1e293b;
+  --base-300: #334155;
+  --base-content: #f8fafc;
+}
+
+/* Tab functionality */
+.tab-content {
+  display: block;
+}
+
+.tab-content.hidden {
+  display: none;
+}
+
+.tabs .tab[data-tab="technical"] {
+  background-color: hsl(var(--p));
+  color: hsl(var(--pc));
+}
+
+.tabs .tab[data-tab="soft"] {
+  background-color: transparent;
+  color: hsl(var(--bc));
+}
+
+.tabs .tab.tab-active {
+  background-color: hsl(var(--p));
+  color: hsl(var(--pc));
+}
+
+/* Custom animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Text reveal animation */
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.animate-reveal {
+  animation: reveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* Gradient text animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient 8s ease infinite;
+}
+
+/* Text scale animation */
+@keyframes scaleText {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-scale {
+  animation: scaleText 3s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Text glow animation */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0px rgba(59, 130, 246, 0);
+  }
+  50% {
+    text-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+  }
+  100% {
+    text-shadow: 0 0 0px rgba(59, 130, 246, 0);
+  }
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* Navbar dropdown animations */
+.dropdown-content {
+  transform-origin: top;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+/* Improved focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Flag icons */
+.fi {
+  display: inline-block;
+  width: 1.33em;
+  height: 1em;
+  background-size: contain;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.fi-us {
+  background-image: url("https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/flags/4x3/us.svg");
+}
+
+.fi-br {
+  background-image: url("https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/flags/4x3/br.svg");
+}
+
+.fi-es {
+  background-image: url("https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/flags/4x3/es.svg");
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Improved button styles */
+.btn {
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  transition: all 0.2s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Improved section spacing */
+section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background patterns */
+.bg-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Improved scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--b3));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--p) / 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--p) / 0.7);
+}
+
+/* Fade-in animation for content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Improved image hover effects */
+.img-hover {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.img-hover:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Name title styling */
+.name-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .name-title {
+    font-size: 2.5rem;
+  }
+}
+
+/* Professional title styling */
+.professional-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .professional-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Section title reveal animation */
+@keyframes borderReveal {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.border-reveal {
+  position: relative;
+}
+
+.border-reveal::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: hsl(var(--p));
+  animation: borderReveal 0.8s ease-out forwards;
+}
+
+/* Skill card styling */
+.skill-card {
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.skill-card:hover {
+  border-left-color: hsl(var(--p));
+  background-color: hsl(var(--p) / 0.1);
+}
+
+/* Project card enhancements */
+.project-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, hsl(var(--p) / 0.2), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
