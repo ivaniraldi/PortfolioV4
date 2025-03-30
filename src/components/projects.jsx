@@ -6,6 +6,14 @@ export default function Projects() {
 
   const projects = [
     {
+      title: "Webrush Brasil",
+      description: t("projects_details.webrush.description"),
+      technologies: ["React", "Tailwind CSS", "Node.js"],
+      image: "https://i.imgur.com/OkCpwSU.png",
+      link: "https://www.webrushbrasil.com.br/",
+      demoLink: "https://www.webrushbrasil.com.br/"
+    },
+    {
       title: "Blog",
       description: t("projects_details.blog.description"),
       technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
@@ -37,14 +45,6 @@ export default function Projects() {
       link: "https://portfolio-portfolio-cfrk.onrender.com/",
       demoLink: "https://portfolio-portfolio-cfrk.onrender.com/"
     },
-    {
-      title: "Webrush Brasil",
-      description: t("projects_details.webrush.description"),
-      technologies: ["React", "Tailwind CSS", "Node.js"],
-      image: "https://i.imgur.com/fPTjbde.png",
-      link: "https://www.webrushbrasil.com.br/",
-      demoLink: "https://www.webrushbrasil.com.br/"
-    }
   ]
 
   return (

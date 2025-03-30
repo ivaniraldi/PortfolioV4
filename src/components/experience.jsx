@@ -11,10 +11,18 @@ export default function Experience() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
 
   const experiences = [
+  
+    {
+      title: "full_stack_tutor_title",
+      company: "Desafío Latam",
+      period: "SEP 2023 - PRESENT",
+      description: "full_stack_tutor_description",
+      responsibilities: ["full_stack_tutor_resp1", "full_stack_tutor_resp2", "full_stack_tutor_resp3"],
+    },
     {
       title: "back_end_tutor_title",
       company: "Coderhouse",
-      period: "MAY 2022 - PRESENT",
+      period: "MAY 2022 - SEP 2024",
       description: "back_end_tutor_description",
       responsibilities: [
         "back_end_tutor_resp1",
@@ -22,13 +30,6 @@ export default function Experience() {
         "back_end_tutor_resp3",
         "back_end_tutor_resp4",
       ],
-    },
-    {
-      title: "full_stack_tutor_title",
-      company: "Desafío Latam",
-      period: "SEP 2023 - PRESENT",
-      description: "full_stack_tutor_description",
-      responsibilities: ["full_stack_tutor_resp1", "full_stack_tutor_resp2", "full_stack_tutor_resp3"],
     },
     {
       title: "freelance_title",

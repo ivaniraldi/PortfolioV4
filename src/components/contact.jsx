@@ -4,6 +4,7 @@ import { useState, useRef } from "react"
 import { useLanguage } from "./language-provider"
 import { Phone, Mail, MapPin, Send, CheckCircle } from "lucide-react"
 import { motion, useInView } from "framer-motion"
+import emailjs from "@emailjs/browser" // Import EmailJS
 
 export default function Contact() {
   const { t } = useLanguage()
@@ -26,17 +27,33 @@ export default function Contact() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        "service_urynada", // Replace with your EmailJS service ID
+        "template_4jfhbhf", // Replace with your EmailJS template ID
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          date: new Date().toLocaleDateString(), // Add the current date
+          time: new Date().toLocaleTimeString(), // Add the current time
+        },
+        "-4OVkyttlIm08uYsA" // Replace with your EmailJS user ID
+      )
 
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", message: "" })
+      setIsSubmitted(true)
+      setFormData({ name: "", email: "", message: "" })
 
-    // Reset success message after 5 seconds
-    setTimeout(() => {
-      setIsSubmitted(false)
-    }, 5000)
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 5000)
+    } catch (error) {
+      console.error("Failed to send email:", error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactInfo = [
