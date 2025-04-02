@@ -161,7 +161,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 z-10"></div>
-            <img src="https://i.imgur.com/f1ViSuk.jpeg" alt="Ivan Iraldi" className="w-full h-full object-cover" />
+            <img src="https://i.imgur.com/aUEXfQi.png" alt="Ivan Iraldi" className="w-full h-full object-cover" />
 
             {/* Decorative elements */}
             <div className="absolute -top-6 -right-6 w-12 h-12 bg-accent/30 rounded-full blur-md"></div>
