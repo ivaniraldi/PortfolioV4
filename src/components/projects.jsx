@@ -8,42 +8,52 @@ export default function Projects() {
     {
       title: "Webrush Brasil",
       description: t("projects_details.webrush.description"),
-      technologies: ["React", "Tailwind CSS", "Node.js"],
+      technologies: ["React", "Tailwind CSS", "Node.js", "PostgreSQL",],
       image: "https://i.imgur.com/OkCpwSU.png",
-      link: "https://www.webrushbrasil.com.br/",
+      link: "https://github.com/ivaniraldi/WebRush-Brasil",
       demoLink: "https://www.webrushbrasil.com.br/"
     },
     {
       title: "Blog",
       description: t("projects_details.blog.description"),
-      technologies: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
-      image: "https://i.imgur.com/2VYp3iA.png",
-      link: "https://urbanblog.onrender.com",
+      technologies: ["Next.Js", "Tailwind CSS", "Node.js",],
+      image: "https://i.imgur.com/qiBCPxn.png",
+      link: "https://github.com/ivaniraldi/urbanblog",
       demoLink: "https://urbanblog.onrender.com"
-    },
-    {
-      title: "Landing Page",
-      description: t("projects_details.landing.description"),
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      image: "https://i.imgur.com/wQpr0ve.png",
-      link: "https://landingpage-portfolio.onrender.com/",
-      demoLink: "https://landingpage-portfolio.onrender.com/"
-    },
-    {
-      title: "Ecommerce",
-      description: t("projects_details.ecommerce.description"),
-      technologies: ["React", "Tailwind CSS", "Node.js", "Stripe"],
-      image: "https://i.imgur.com/vWJ3EfK.png",
-      link: "https://ecommerce-portfolio-8cbo.onrender.com/",
-      demoLink: "https://ecommerce-portfolio-8cbo.onrender.com/"
     },
     {
       title: "Portfólio",
       description: t("projects_details.portfolio.description"),
-      technologies: ["React", "Tailwind CSS", "Framer Motion"],
-      image: "https://i.imgur.com/U0z8kZq.png",
-      link: "https://portfolio-portfolio-cfrk.onrender.com/",
+      technologies: ["Next.Js", "Tailwind CSS", "Framer Motion"],
+      image: "https://i.imgur.com/mxrrNV5.png",
+      link: "https://github.com/ivaniraldi/Portfolio-portfolio",
       demoLink: "https://portfolio-portfolio-cfrk.onrender.com/"
+    },
+    
+    {
+      title: "Ecommerce",
+      description: t("projects_details.ecommerce.description"),
+      technologies: ["React", "Bootstrap", "Node.js", "PostgreSQL", "MercadoPago"],
+      image: "https://i.imgur.com/b8OGtyk.png",
+      link: "https://github.com/ivaniraldi/ecommerce",
+      demoLink: "https://ecommerce-portfolio-8cbo.onrender.com/"
+    },
+    
+    {
+      title: "Más trabajos",
+      description: t("projects_details.win98.description"),
+      technologies: ["React", "Tailwind CSS", "Framer Motion"],
+      image: "https://i.imgur.com/YMqAzCP.png",
+      link: "https://github.com/ivaniraldi/ivaniraldi.github.io",
+      demoLink: "https://win98ivaniraldi.vercel.app/",
+    },
+    {
+      title: "InvoiceGen PRO",
+      description: t("projects_details.landing.description"),
+      technologies: ["HTML", "JavaScript", "Tailwind CSS",],
+      image: "https://i.imgur.com/Rp42mGD.png",
+      link: "https://github.com/ivaniraldi/InvoiceGenPro",
+      demoLink: "https://ivaniraldi.github.io/InvoiceGenPro/"
     },
   ]
 
@@ -82,7 +92,7 @@ export default function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-1 bg-primary/10 text-primary rounded-full text-sm"
+                      className="px-2 text-gray-500 py-1 bg-primary/10 text-primary rounded-full text-sm badge badge-outline"
                     >
                       {tech}
                     </span>

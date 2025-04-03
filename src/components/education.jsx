@@ -11,7 +11,7 @@ export default function Education() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 })
 
   return (
-    <section id="education" className="py-16" ref={sectionRef}>
+    <section id="education" className="py-16 hidden" ref={sectionRef}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}

@@ -14,13 +14,13 @@ export default function Certificates() {
     {
       title: "full_stack_certificate_title",
       issuer: "Henry",
-      link: "#",
+      link: "https://certificates.soyhenry.com/cert?id=0dae7c64-9db7-44f5-874e-82fa8e3f1548",
       icon: <Award className="h-8 w-8" />,
     },
     {
       title: "english_certificate_title",
       issuer: "EFSET",
-      link: "#",
+      link: "https://www.efset.org/cert/zEYexh",
       icon: <Award className="h-8 w-8" />,
     },
   ]

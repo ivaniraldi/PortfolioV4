@@ -33,7 +33,10 @@ export default function Hero() {
   }
 
   return (
-    <section id="home" className="py-20 min-h-[90vh] flex items-center relative overflow-hidden">
+    <section
+      id="home"
+      className="py-20 min-h-screen flex items-center justify-center relative overflow-hidden"
+    >
       {/* Background decorative elements */}
       <div className="absolute top-20 right-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl"></div>
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-accent/5 rounded-full blur-3xl"></div>
@@ -53,7 +56,7 @@ export default function Hero() {
 
           {/* Animated name with larger size */}
           <motion.h1
-            className="name-title font-heading mb-2 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
+            className="name-title font-heading mb-2 text-gray-300 bg-clip-text bg-gradient-to-r from-primary via-accent to-primary"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{
@@ -71,8 +74,8 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.5 }}
           >
             <span className="relative">
-              <span className="absolute -left-8 top-1/2 transform -translate-y-1/2 text-primary">
-                <Code size={24} />
+              <span className="absolute -right-10 top-1/2 transform -translate-y-1/2 text-primary">
+                <Code size={28} />
               </span>
               {t("web_developer")}
             </span>
@@ -107,7 +110,7 @@ export default function Hero() {
             >
               {t("contact_me")}
             </a>
-            <a href="/resume.pdf" download className="btn btn-outline hover:bg-base-200 transition-all">
+            <a href={t("download_pdf")} download className="btn btn-outline hover:bg-gray-400 transition-all">
               <Download className="mr-2 h-4 w-4" />
               {t("download_cv")}
             </a>

@@ -97,14 +97,9 @@ export default function Navbar() {
       ],
     },
     {
-      label: "education_and_certificates",
-      href: "#",
+      label: "certificates",
+      href: "certificates",
       icon: <GraduationCap size={16} />,
-      dropdown: true,
-      items: [
-        { label: "education", href: "education" },
-        { label: "certificates", href: "certificates" },
-      ],
     },
     {
       label: "languages",
@@ -189,7 +184,7 @@ export default function Navbar() {
                             <div className="w-full">
                               <button
                                 onClick={() => toggleDropdown(item.label)}
-                                className="flex w-full items-center justify-between py-2 px-4 hover:bg-base-200 rounded-lg"
+                                className="flex w-full items-center justify-between py-2 px-4 rounded-lg"
                               >
                                 <span className="flex items-center gap-2">
                                   {item.icon}
@@ -219,7 +214,7 @@ export default function Navbar() {
                                       >
                                         <button
                                           onClick={() => scrollToSection(subItem.href)}
-                                          className="block w-full text-left py-2 px-4 hover:bg-base-200 rounded-lg"
+                                          className="block w-full text-left py-2 hover:bg-base-200 hover:rounded-sm"
                                         >
                                           {t(subItem.label)}
                                         </button>
@@ -232,7 +227,7 @@ export default function Navbar() {
                           ) : (
                             <button
                               onClick={() => scrollToSection(item.href)}
-                              className="flex w-full items-center gap-2 py-2 px-4 hover:bg-base-200 rounded-lg"
+                              className="flex w-full items-center gap-2 py-2  hover:bg-base-200 rounded-lg"
                             >
                               {item.icon}
                               {t(item.label)}
@@ -263,7 +258,7 @@ export default function Navbar() {
                         <motion.button
                           onClick={() => toggleDropdown(item.label)}
                           className={`flex items-center gap-1 px-3 py-2 rounded-lg transition-colors ${
-                            activeDropdown === item.label ? "bg-base-200" : "hover:bg-base-200"
+                            activeDropdown === item.label ? "bg-base-200" : "hover:bg-base-200 hover:rounded-lg"
                           }`}
                           aria-expanded={activeDropdown === item.label}
                           aria-haspopup="true"

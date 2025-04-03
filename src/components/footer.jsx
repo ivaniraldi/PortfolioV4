@@ -20,7 +20,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <p className="text-sm opacity-70 flex items-center gap-1">
-              © {currentYear} Ivan Iraldi. {t("all_rights_reserved")}
+              © {currentYear} Ivan Iraldi. 
               <motion.span
                 animate={{
                   scale: [1, 1.1, 1],
@@ -35,7 +35,7 @@ export default function Footer() {
               </motion.span>
             </p>
           </div>
-          <div className="flex space-x-4">
+          <div className="flex space-x-4 me-0 md:me-20">
             <motion.a
               href="https://linkedin.com/in/ivaniraldi"
               target="_blank"

@@ -17,6 +17,7 @@
   "hero_description": "Desarrollador web full-stack con experiencia en JavaScript, React, SQL y Node.js. Apasionado por crear aplicaciones web eficientes y escalables. Destaco por mi capacidad para trabajar en equipo, mi atención al detalle y mi compromiso con el aprendizaje continuo. Busco unirme a un equipo dinámico donde pueda contribuir con mis habilidades técnicas y crecer profesionalmente.",
   "contact_me": "Contáctame",
   "download_cv": "Descargar CV",
+  "download_pdf": "/resume-es.pdf",
   "back_end_tutor_title": "Tutor de Programación Back-End",
   "back_end_tutor_description": "Trabajando como Tutor de Programación Back-End en Coderhouse.",
   "back_end_tutor_resp1": "Facilitación de sesiones de Q&A, resolviendo dudas y brindando asistencia a estudiantes durante el bootcamp.",
@@ -89,7 +90,7 @@
       "description": "Involucra a tu audiencia y aumenta tu visibilidad con contenido relevante. Perfecto para atraer clientes e impulsar tráfico."
     },
     "landing": {
-      "description": "Página única para atraer y convertir visitantes. Útil para promociones o campañas."
+      "description": "Genera facturas profesionales en segundos con InvoiceGen Pro. Herramienta gratuita y fácil de usar para crear facturas en PDF."
     },
     "ecommerce": {
       "description": "Tienda en línea para vender productos o servicios. Ideal para negocios que quieren crecer y gestionar ventas."
@@ -99,6 +100,9 @@
     },
     "webrush": {
       "description": "Soluciones personalizadas de diseño y desarrollo web para negocios. Ideal para empresas que buscan presencia digital impactante."
+    },
+    "win98": {
+      "description": "Web interactiva 'clon' de Windows 98 donde puedes ver otros de mis proyectos personales, códigos y demos."
     }
   }
 }
